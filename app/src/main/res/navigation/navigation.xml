@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/contentListFragment">
+    <fragment
+        android:id="@+id/contentListFragment"
+        android:name="com.gfb.watchlist.main.ui.content.ContentListFragment"
+        android:label="fragment_content_list"
+        tools:layout="@layout/fragment_content_list" >
+        <action
+            android:id="@+id/action_contentListFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.gfb.watchlist.main.ui.details.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="content"
+            app:argType="com.gfb.watchlist.main.model.ContentModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/archiveFragment"
+        android:name="com.gfb.watchlist.main.ui.archive.ArchiveFragment"
+        android:label="fragment_archive"
+        tools:layout="@layout/fragment_archive" />
+</navigation>
